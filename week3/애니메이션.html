@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+            margin: 20px;
+        }
+        .box1:hover { /* 마우스 올렸을 시 선택 박스 색상 변경 */
+            background-color: aquamarine;
+            transition-duration: 500ms; /* 속도감 */
+            transition-timing-function: linear; /* 일정한 속도로 애니메이션 효과 */
+        }
+        .box2:hover {
+            background-color: aqua;
+            border-radius: 50%; /* 선택 시 곡률 */
+            transition: all 500ms ease;
+        }
+        .box3:hover { 
+            background-color: blue;
+            border-radius: 50%;
+            transform: translateX(400px);
+            transition: 1s ease-in-out;
+        }
+        /*
+        linear
+        easy-in ; 선택 시 그 순간 부드럽게 선택되고 일정한 속도감
+        easy-in-out ; 
+         */
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300&display=swap");
+
+* {
+  margin: 0px; /* 화면 자측 상단 기준 외부 여백 top, bottom, right, left = 0으로 초기화 */
+  padding: 0px; /* 화면 자측 상단 기준 내부 여백 top, bottom, right, left = 0으로 초기화 */
+  box-sizing: border-box; /* 여백을 포함하는 사이즈 계산 여백5 10+90 < ? */
+  /* border: 1px solid lightslategray; /* solid 실선 */
+}
+body {
+  background-color: black; /* 전체 화면색 변경 */
+}
+ul {
+  list-style: none; /* 내용 앞 동그라미 삭제 */
+}
+a {
+  text-decoration: none; /* 하이퍼링크 밑줄 없애기 */
+}
+header {
+  width: 100%; /* % 사용 시 사용자가 화면을 줄이고 늘릴 때 반응형으로 움직임 */
+  display: flex; /* inline, block, lnline-block, flex(사용 시 justify-content-space~ 사용 가능) */
+  border-bottom: 1px solid gold; /* 바닥에 선 그리기 두께 1px (실선 solid, 점선 dotted)*/
+  justify-content: space-between; /* display : flex 일 때만 사용됨 */
+  justify-items: center; /* 아이템 정렬 (center 값으로 중앙 배치) */
+  top: 0px; /* 꼭지점에서의 y축 좌표 */
+  left: 0px; /* 꼭지점에서 x축 좌표 */
+  color: antiquewhite; /* 글자색 */
+  z-index: 2; /* 레이어의 계층 번호 */
+}
+header h1 {
+  font: normal 4vw/1 "Sofia+Sans";
+  color: antiquewhite;
+  z-index: 2;
+}
+header .gnb li {
+  /* header tag 아래 ul class = gnb li < 에 스타일 선언 */
+  margin: 0px 20px; /* 메뉴 이름 좌우에 20px씩 띄워줘 총 40px */
+}
+header .gnb li a {
+  /* 앵커 태그 = a ? 최근에 본 상품 ?? 링크(클릭 시 페이지 이동할 수 있는 기능) ?? */
+  color: antiquewhite;
+}
+.gnb {
+  display: flex; /* ul 태그 아래 li 태그는 수직 방향으로 배치되는데 수평 방향으로 전환해 줌 */
+  z-index: 2;
+}
+header .sns li {
+  margin: 0px 10px; /* top, bottom 0 / left, right 10 */
+}
+header .sns li a {
+  font-size: 16px; /* a 태그 안 내용의 글자 크기 조정 (이미지 크기 조정됨 < ??) */
+  color: antiquewhite;
+}
+.sns {
+  display: flex;
+  z-index: 2;
+}
+div {
+  /* 비디오 태그 관련 컨텐츠 */
+  width: 100%; /* 폭 전체 채움 */
+  height: 100vh; /* v = viewport 보이는 화면의 높이값 */
+  position: absolute; /* absolute를 주어야 좌표값에 따라 배치 설정 */
+  top: 0px;
+  left: 0px;
+  overflow: hidden; /* 스크롤바 설정(hidden 값을 주어 숨김) */
+  z-index: 1; /* 레이어 계층 번호  */
+}
+div video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 화면에 영상을 꽉 채우게 함 */
+}
+.txt {
+  position: absolute;
+  left: 6vw;
+  top: 50%;
+  z-index: 2;
+}
+.txt p {
+  color: antiquewhite;
+  font: normal 8vw/1 "Sofia+Sans";
+}
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font: 12px/1 "arial"; /* 글자 크기/로우 높이 값/ "글꼴" */
+  text-align: center; /* 텍스트 정렬(center 값으로 중앙 배치) */
+  letter-spacing: 2px; /* 글자 자간 */
+  padding: 5vh 5vw; /* v = viewport 보여지는 화면의 내부 여백 값 */
+  color: antiquewhite;
+  z-index: 2;
+}

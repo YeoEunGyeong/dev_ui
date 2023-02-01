@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+}
+.container {
+  height: 100%; /* 컨테이너의 부모(body)의 100%로 채움 */
+  /* height: 100vw; vh ; 보이는 높이의 100% 사용 */
+  display: flex; /* 인라인 요소가 아니지만 flex 사용해서 수평 (default 왼 > 오 정렬) */
+  /* display : flex 선언해야 flex_direction 사용 가능 */
+  background-color: cadetblue;
+  flex-direction: row;
+  justify-content: space-around;
+  /* flex-wrap 사용 시 보이는 화면창에 가득차면 다음 줄로 넘김 (default nowrap) */
+  flex-wrap: wrap;
+}
+.item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid violet;
+  background-color: azure;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hacker news API [step1]</title>
+    <!-- 
+      선언부에서 자바스크립트를 import 하면 html은 순차적으로 읽기가 진행됨
+      12번에서 div 태그가 존재한다는 사실 알 수 없음 ; undefined 발생
+      해결 방법은 script 속성으로 defer 추가
+      브라우저가 news.html을 서버로부터 다운로드하고 document 스캔하여
+      DOM tree 그릴 때(태그 정보를 모두 다 읽을 때 undefiend 안 일어남)까지 기다림
+      보통 전변 선언이나 함수 선언은 head 태그 안에서 작성
+     -->
+    <script defer src="./news.js"></script>
+  </head>
+  <body>
+    <!-- div#root -->
+    <div id="root"></div>
+  </body>
+</html>

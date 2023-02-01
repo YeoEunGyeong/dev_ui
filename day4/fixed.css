@@ -1,0 +1,15 @@
+.container {
+  background-color: beige;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border: 2px solid blue;
+}
+.box {
+  background-color: yellow;
+  position: fixed; /* 스크롤바 움직여도 고정하는 값 */
+  left: 20px;
+  top: 20px;
+}

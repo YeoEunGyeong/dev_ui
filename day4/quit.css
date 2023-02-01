@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+}
+.parent {
+  /* 부모 - 자손 상속 시 position-relative 값을 넣어줘야 상속 Oooo */
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+  position: relative;
+}
+/* .child { // 자손 top, left 0
+    width: 100px;
+    height: 100px;
+    border: 2px dotted black;
+    background-color: yellow;
+    display: inline-block;
+} */
+.child {
+  width: 100px;
+  height: 100px;
+  border: 2px dotted black;
+  background-color: yellow;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}

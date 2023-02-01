@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제 남편입니다</title>
+    <!-- 
+        절대 경로 ; 처음부터 끝까지 다 적음
+        상대 경로 ; 현재 내 위치를 기준으로 찾음 (권장)
+        . 현재 내가 바라보는 경로
+        .. 현재 내 위치의 상위 경로
+    -->
+    <link rel="stylesheet" href="./sakuma.css" />
+    <script
+      src="https://kit.fontawesome.com/d08a6c5255.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- 메뉴바 구성(Navber) -->
+    <header>
+      <h1>SKM</h1>
+      <ul class="gnb">
+        <!-- li*6>a[href='#'] -->
+        <li>
+          <a href="http://127.0.0.1:5500/day3/coordinate1.html">COMPANY</a>
+        </li>
+        <li><a href="#">BRAND</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">LOCATION</a></li>
+      </ul>
+      <ul class="sns">
+        <li>
+          <a href="#"><i class="fas fa-search"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="far fa-envelope"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </li>
+      </ul>
+    </header>
+    <hr />
+    <!-- 콘텐츠 구성(Figure) -->
+    <div>
+      <video src="../images/car.mp4" autoplay muted loop></video>
+      <article class="txt">
+        <p>SKM<br />Development</p>
+      </article>
+    </div>
+    <hr />
+    <!-- 바닥글 구성(Footer) -->
+    <footer>2023 SKM &copy; ALL RIGHTS RESERVERD</footer>
+  </body>
+</html>

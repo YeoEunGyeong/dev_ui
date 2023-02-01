@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: 1px solid lightslategray;
+    }
+  </style>
+  <body>
+    <!-- 외부 여백 지정하는 css 속성 -->
+    <span style="margin: 20px 30px">인라인 요소1</span>
+    <!-- 내부 여백 지정하는 css 속성 -->
+    <span style="padding: 20px 40px">인라인 요소2</span>
+    <span style="width: 100px">인라인 요소3</span>
+    <span style="height: 100px">인라인 요소4</span>
+  </body>
+</html>
+<!-- 
+    span*4 // 4개 생성
+    span{내용$}*4 // {} 안의 내용 1,2,3,4 붙여 4개 생성
+    
+    "margin: 20px 30px;" 파라미터가 두 개일 때 20 top, buttom / 30 right, left
+ -->

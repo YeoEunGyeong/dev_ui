@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>키보드 이벤트</title>
+  </head>
+  <body>
+    <script>
+      window.addEventListener("keyup", (e) => {
+        console.log(e.key);
+        if (e.key == "Enter") {
+          //대소문자 주의!
+          console.log("치지 마");
+        }
+      });
+    </script>
+  </body>
+</html>
+<!-- 
+    keydown ; 특정 키를 누르고 있을 때
+    keyup ; 특정 키를 누르고 있다가 떼면
+    keypress ; 키를 누르고 있을 때(alt, ctrl, shift 제외)
+ -->

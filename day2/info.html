@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- 선언문 html -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- UTF-8 전세계 표준 포맷 -->
+    <!-- explorer에 여러 버전 혹시 낮은 버전이 동작될 때 최신 익스플로러로 렌더링 해 줌 -->
+    <!-- edge 버전부터 크롬 V8 엔진 사용 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- viewport가 있어야 모바일 디바이스가 모바일 페이지를 제대로 출력
+    하이브링배 = 네이티브앱 + 웹앱 
+    요소 = 태그 = 노드 
+    1 인라인 요소 ; 크기 없음, 자동 줄바꿈 없음 <br /><br> // 리액트에서는 사용 안 됨
+    2 블록 요소 ; 자체 크기, 자동으로 줄바꿈
+-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>윈도우 사이즈</title>
+    <style>
+      .tag {
+        display: inline-block; /* 컨텐츠를 감싸준다 */
+        background-color: antiquewhite;
+        font-size: 40px;
+        padding: 16px; /* 내부 ; 상하좌우 */
+        margin-top: 16px;
+        margin-bottom: 34px;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: blanchedalmond;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tag">윈도우 사이즈</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      window.addEventListener("resize", () => {
+        /*  arrow function */
+        //window.addEventListener("resize", function ()) { // 최신식 코드 아님
+        console.log(
+          // 모니터의 화면 크기
+          `window.screen : ${window.screen.width}, ${window.screen.height}`
+        );
+        console.log(
+          // url과 탭(세션 아이디를 쿠키에 저장) 전체적인 브라우저 크기
+          `window.outer : ${window.outerWidth}, ${window.outerHeight}`
+        );
+        console.log(
+          // 웹페이지 + 스크롤바
+          `window.inner : ${window.innerWidth}, ${window.innerHeight}`
+        );
+        console.log(
+          // 스크롤바 제외된 문서 사이즈
+          `document(문서) : ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`
+        );
+      });
+    </script>
+    <!-- 자바람다식 지원 -->
+  </body>
+</html>

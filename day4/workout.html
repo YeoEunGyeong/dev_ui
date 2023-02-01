@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/d08a6c5255.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./workout.js"></script>
+    <link rel="stylesheet" href="./workout.css" />
+    <!-- 외부에 자바스크립트를 호출할 때 반드시 DOMtree 완성되어있어야 함
+            자바 스크립트 파일은 웹서버로부터 다운로드 받고 브라우저가
+            실행하는데 이 때 해당하는 html문서의 DOM구성이 완료되지 않으면
+            이벤트 소스의 정보가 undefined 상태 > 에러 발생 TypeError
+            이 때 defer 붙여주면 DOMtree가 완성될 때까지 기다렸다가 실행
+            > 버튼의 객체를 인지하게 됨으로 에러 발생 안 됨
+        -->
+  </head>
+  <body>
+    <section class="list">
+      <!-- 헤더 영역 -->
+      <header class="header">앗싸라비야App</header>
+
+      <ul class="items">
+        <il class="item_row">
+          <div class="item">
+            <span class="item_name">ASSARABIYAA</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </il>
+        <il class="item_row">
+          <div class="item">
+            <span class="item_name">콜롬비아</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </il>
+        <il class="item_row">
+          <div class="item">
+            <span class="item_name">비아는 스타벅스 커피인데요</span>
+            <button class="btn_delete">
+              <i class="fas far fa-trash-alt"></i>
+            </button>
+          </div>
+        </il>
+      </ul>
+      <!-- 푸터 영역 -->
+      <footer class="footer">
+        <!-- 입력 화면 -->
+        <input type="text" name="" class="user_input" />
+        <button class="btn_add">
+          <i class="fas fas fa-plus"></i>
+        </button>
+      </footer>
+    </section>
+  </body>
+</html>

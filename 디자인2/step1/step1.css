@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box; /* 패딩과 마진 포함 사이즈 계산 */
+  /* border: 1px solid seagreen; 마진과 패딩 공간, 영역, 블록 */
+}
+body {
+  margin: 0; /* 공간 없이 모서리에 붙임 */
+}
+a {
+  text-decoration: none; /* a태그 링크 밑줄 삭제 */
+}
+ul {
+  list-style: none; /* 순차 구슬 삭제 */
+  padding-left: 0; /* 구슬 공간 삭제 */
+}
+#navbar {
+  position: fixed;
+  display: flex; /* skill Inventory, ul 좌우 펼침 */
+  width: 100%; /* 생략 반응형 웹, 버거 아이콘 ? */
+  height: 60px; /* 높이 */
+  justify-content: space-between;
+  background-color: rgb(95, 161, 44);
+}
+.navbar-logo {
+  font-size: 30px;
+  font-weight: 600;
+}
+.navbar-menu {
+  display: flex; /* ul안 li 좌우 펼침 */
+}
+/* 메뉴 아이템 */
+.navbar-menu-item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.navbar-menu-item:hover {
+  background-color: darkgreen;
+}
+/* H 강조 */
+.navbar-menu-item.active {
+  border: 2px double white;
+}
+/* 버거 아이콘 아이템 */
+.burger-toggle-btn {
+  position: absolute;
+  right: 30px;
+  font-size: 28px;
+  display: none;
+}
+/* 섹션 */
+.section {
+  text-align: center;
+  margin: auto;
+}
+.hcontent {
+  background-color: rgb(241, 255, 234);
+  background-image: url("../../images/camping-night2.jpg");
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 500px;
+}
+.mcontent {
+  background-color: rgb(228, 255, 215);
+  width: 100%;
+  height: 500px;
+}
+.scontent {
+  background-color: rgb(209, 255, 185);
+  width: 100%;
+  height: 500px;
+}
+.pcontent {
+  background-color: rgb(188, 255, 155);
+  width: 100%;
+  height: 500px;
+}
+/* 블록 요소 안에 블록 요소 사용 시 벌어짐 발생 부모-자식 관계로 처리 */
+#contact {
+  position: relative; /* 부모 */
+}
+.ccontent {
+  position: absolute; /* 자식 */
+  background-color: rgb(175, 254, 135);
+  width: 100%;
+  height: 180px;
+}
+.contact-email,
+.contact-rights {
+  color: black;
+}
+.contact-links {
+  font-size: 48px;
+  transition: all 300ms ease-in;
+}
+.contact-links i:hover {
+  transform: scale(1.1);
+  color: rgb(47, 79, 66);
+}
+/* 반응형 768px 보다 작아지면 나타남 */
+@media screen and (max-width: 768px) {
+  .burger-toggle-btn {
+    display: block; /* 1 버거 아이콘 표시 */
+  }
+  #navbar {
+    /* 메뉴바의 내용 아래로 출력 */
+    flex-direction: column; /* 3 메뉴바 아래로 출력 */
+    align-items: flex-start; /* 4 메뉴 앞쪽 배치 */
+  }
+  .div-menu {
+    width: 100%; /* 2 메뉴바 페이지 전체 채움 */
+  }
+  .navbar-menu {
+    flex-direction: column; /* 5 */
+    display: block; /* 6 */
+    text-align: center; /* 7 */
+  }
+}
