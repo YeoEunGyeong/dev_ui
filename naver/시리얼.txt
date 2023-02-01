@@ -1,0 +1,12 @@
+Client ID ; EGe9koUsGWoODIz8HYiG
+Secret ; WCATwvuEoc
+
+프로젝트 이름 아래에서 npm init -y 엔터 시
+package.json 파일 생성
+이 파일에는 의존성 주입 들어감
+
+devDependencies - 개발 모드에서 의존성 주입
+; 테스트 서버까지의 배포 가능
+
+dependencies
+; 운영 서버에 포함 Xxx

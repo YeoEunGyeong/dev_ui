@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>공지사항 작성하기</title>
+    <script type="text/javascript">
+      join = () => {
+        const from = document.querySelectorSelector("#f_join");
+        console.log("join");
+        frm.submit();
+      };
+    </script>
+    <style>
+      input {
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="insert.no">
+      <fieldset>
+        <legend>공지사항 작성하기</legend>
+        <label>제목</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="제목을 입력하시오"
+          required="required"
+        />
+        <br />
+        <label>내용</label>
+        <textarea
+          name="content"
+          id="content"
+          placeholder="내용을 입력하시오"
+          style="height: 150px; width: 180px"
+          required="required"
+        ></textarea>
+        <br />
+        <label>첨부파일</label>
+        <input
+          type="file"
+          id="uploadFile"
+          name="uploadFile"
+          placeholder="내용을 입력하시오"
+          required="required"
+        />
+        <br />
+        <div>
+          <button id="btn.Join" onclick="join()" style="display: inline-block">
+            작성하기
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
