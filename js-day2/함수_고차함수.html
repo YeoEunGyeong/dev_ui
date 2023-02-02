@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 반환형으로 함수 가능 -->
+    <script type="text/javascript">
+      // 3 대입형 함수(일급 함수)
+      const sayHello = function () {
+        return function () { // 고차 함수
+          console.log("Hello!");
+        };
+      };
+      const myFunc = sayHello();
+      myFunc();
+    </script>
+  </body>
+</html>
+<!-- 
+  함수를 반환하는 함수를 고차 함수라 함
+  리액트, 리덕스 컨셉 재현 시 필요
+  구독 발행 모델 구현 시 필요
+  커리 함수
+ -->

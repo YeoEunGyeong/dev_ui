@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 1 선언적 함수
+      function hap(a1, a2) {
+        // a1 = 1, a2 = 2 → call by value
+        console.log(a1);
+      }
+      const hap1 = function (a1, a2) {
+        const result = a1 + a2
+        return result;
+      };
+      // Arrow function
+      const hap2 = (a1, a2) => {
+        const result = a1 + a2;
+        return result;
+      };
+      const hap3 = (a1) => {
+        // 파라미터가 하나일 때는 () 생략 가능
+        const result = a1;
+        return result;
+      };
+      // insert here
+      console.log(hap1(1,2));
+      console.log(hap2(3,4));
+      console.log(hap3(5));
+
+      hap(); // undefine = 지변
+      hap(1, 2);
+      hap(3);
+    </script>
+  </body>
+</html>
+<!-- 
+    Arrow function
+    ; 기존의 익명 함수를 더 쉽게 쓰기 위해 축약한 형태
+    내부로 전달되는 파라미터가 하나면 괄호 생략 가능
+
+    js는 같은 이름의 함수 중복 정의 못함 → 메서드 오버로딩 없음
+    함수의 이름은 다르게 작성해야 함
+ -->

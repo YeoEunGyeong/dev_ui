@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구조 분해, spread 연산</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 리액트 ; 태그와 js 코드 같이 사용
+      let items = [
+        { id: 1, name: "OMG", count: 132 },
+        { id: 2, name: "Hype Boy", count: 33 },
+        { id: 3, name: "Ditto", count: 978 },
+      ];
+      // 추가 - 전개 연산자
+      // 배열만 있을 경우, 객체만 있을 경우, 배열 안에 객체가 있을 경우
+      let items_copy = [...items, { id: 4, name: "Cookies", count: 71 }];
+      document.write("<div>");
+      document.write("<table border='1' borderColor='lightgrey'>");
+        document.write("<thread>추가</thread>")
+      items_copy.forEach((item) => {
+        document.write("<tr>");
+        document.write(`<td>${item.id}</td>`);
+        document.write(`<td>${item.name}</td>`);
+        document.write(`<td>${item.count}</td>`);
+        document.write("</tr>");
+      });
+      document.write("</table>");
+      document.write("</div>");
+      document.write("<hr>");
+      /* 추가 */
+      items_copy.forEach((item) => {
+        document.write(`${item.id} ${item.name} ${item.count} <br/>`);
+      });
+      document.write("<hr>");
+      /* 병합 */
+      let items2 = [{ id: "💫", name: "newJeans", count: 384658234913275 }];
+      let merge = [...items, ...items2];
+      merge.forEach((item) => {
+        document.write(`${item.id} ${item.name} ${item.count} <br/>`);
+      });
+      document.write("<hr>");
+      // 삭제 - filter 함수
+      // let result = window.prompt("삭제할 id 입력"); // 창 띄어주는 코드 prompt
+      // prompt로 받으면 반환값이 문자열임을 주의 ; ===, !== 사용 시 타입 따짐
+      let result = -1;
+      // alert("사용자가 선택한 id : " + result);
+      //arr.filter(callback(element[, index[, array]])[, thisArg])
+      // filter 함수는 조건을 수렴하는 것만 남겨서 새로운 배열을 반환
+      let newitems = items.filter((row) => row.id !== parseInt(result));
+      document.write("<div>");
+      document.write("<table border='1' borderColor='darkgrey'>");
+      document.write("<thread>삭제</thread>");
+      newitems.forEach((item) => {
+        document.write("<tr>");
+        document.write(`<td>${item.id}</td>`);
+        document.write(`<td>${item.name}</td>`);
+        document.write(`<td>${item.count}</td>`);
+        document.write("</tr>");
+      });
+      document.write("</table>");
+      document.write("</div>");
+      document.write("<hr>");
+
+      // 수정 - 추가와 동일 처리 (선삭제 후추가)
+      let x = [...items];
+      result = window.prompt("수정할 id 입력");
+      x.forEach((item) => {
+        if (item.id === parseInt(result)) {
+          x = items.filter((item) => item.id !== parseInt(result));
+          x = [...x, { id: "💫", name: "newJeans", count: 3843275 }];
+        }
+      });
+      document.write("<div>");
+      document.write("<table border='1' borderColor='black'>");
+      document.write("<thread>수정</thread>");
+      x.forEach((item) => {
+        document.write("<tr>");
+        document.write(`<td>${item.id}</td>`);
+        document.write(`<td>${item.name}</td>`);
+        document.write(`<td>${item.count}</td>`);
+        document.write("</tr>");
+      });
+      document.write("</table>");
+      document.write("</div>");
+      document.write("<hr>");
+
+      // 조회 - forEach
+      // "", ''
+      // 같이 사용하는 경우 "안에 '' "
+      // <태그 속성명 = 값>내용</태그>
+      document.write("<div>");
+      document.write("<table border='1' borderColor='grey'>");
+      document.write("<thread>조회</thread>");
+      items.forEach((item) => {
+        document.write("<tr>");
+        document.write(`<td>${item.id}</td>`);
+        document.write(`<td>${item.name}</td>`);
+        document.write(`<td>${item.count}</td>`);
+        document.write("</tr>");
+      });
+      document.write("</table>");
+      document.write("</div>");
+    </script>
+  </body>
+</html>

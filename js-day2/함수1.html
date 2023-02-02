@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--      
+    함수
+    ; 자주 쓰는 실행코드를 블록단위로 묶음
+    기능 단위로 재사용
+    선언은 function 사용하거나 arrow function 처리
+    호출 : 정의되어 있는 함수는 호출해야 기능 실행
+
+    종류
+    1 선언적 함수 - 이름 붙여 정의한 함수
+    ; js 읽을 때 우선적으로 읽어줌
+    호출 위치 자유로움
+    2 익명 함수 - 이름 없이 정의한 함수
+    ; 자체로 호출 불가
+    변수에 익명 함수를 대입하거나 특정 이벤트 객체에 대입하여 호출
+    3 대입형 함수(: 일급 함수) - 변수에 익명 함수가 대입된 형태
+    4 즉시 실행 함수 - 함수가 자기 자신을 정의하자마자 바로 호출
+    -->
+    <script type="text/javascript">
+      hap(); // 1 선언적 함수
+      function hap() {
+        console.log("hap");
+      }
+      const minus = function (a = 1, b = 7) {
+        // 3 대입형 함수 - 일급 함수
+        const num1 = 2;
+        const num2 = 5;
+        document.write(num1 + num2);
+        document.write("<br/>");
+        document.write(a + b);
+      };
+      minus(5, 7);
+
+      function sayHello() {
+        return "Hello, ";
+      }
+      function greeting(helloMessage, name) {
+        console.log(helloMessage() + name);
+      }
+      // `sayHello`를 `greeting` 함수에 인자로 전달
+      greeting(sayHello, "JavaScript!");
+    </script>
+  </body>
+</html>

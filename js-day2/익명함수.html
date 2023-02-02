@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // text/javascript → module(구글 개발자 센터 배우게 되면 쓸 거야)
+      // RealtimeServer
+      const words = ["karina", "is", "god", "winter", "is", "princess"];
+      /*         const result = words.filter((word, index) => {
+            word.length > 6
+        }); */
+      const result = words.filter((word, index) => word.length > 3);
+      console.log(result);
+      document.write(typeof result);
+      document.write("<br/>");
+      document.write(result[0]);
+      document.write("<br/>");
+      document.write(result[1]);
+      document.write("<br/>");
+      document.write(result[2]);
+      // 배열의 구조 분해 할당([] 사용) ; 리액트 필수 문법
+      const [r1, r2, r3] = result;
+      document.write("<hr>");
+      document.write(r1, " ", r2, " ", r3);
+      // 객체의 구조분해 할당(() 사용)
+      let student = {
+        name: "유지민",
+        age: 24,
+        address: "사랑시 고백구 행복동 내마음속",
+      };
+      document.write("<hr>");
+      const { name, age, address } = student;
+      document.write(`${name} ${age} ${address}`);
+    </script>
+  </body>
+</html>

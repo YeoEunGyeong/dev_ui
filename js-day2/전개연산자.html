@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let hobby1 = ["게임", "노래듣기", "영화보기"];
+      let hobby2 = ["김태연보기", "유지민보기", "김민정보기"];
+      let merge = [...hobby1, ...hobby2];
+      merge.forEach((item) => {
+        document.write(item + "<br/>");
+      });
+      merge.forEach((row, index) => {
+        document.write(`<font size = "8"><b>${row}</b> ${index} <br/>`);
+      });
+    </script>
+  </body>
+</html>
