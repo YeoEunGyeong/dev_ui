@@ -10,8 +10,11 @@
     <!-- 반환형으로 함수 가능 -->
     <script type="text/javascript">
       // 3 대입형 함수(일급 함수)
+      // 일급 함수 ; 함수를 다른 변수와 동일하게 다루는 함수
       const sayHello = function () {
-        return function () { // 고차 함수
+        return function () {
+          // 고차 함수
+          // 고차 함수 ; 함수를 반환하는 함수
           console.log("Hello!");
         };
       };

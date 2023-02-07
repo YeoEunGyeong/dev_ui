@@ -1,0 +1,24 @@
+1 API 키
+AIzaSyCOxWTmgfMP1oENBr0Un_tlq4bVRfnIwGE
+
+2 구글 클라이언트 ID/PW
+690526557345-smtsdkb28vn9g1d8qa37sc1bukqb3fl1.apps.googleusercontent.com
+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
+// OAuth ID 발급 → Authentication → Sign-in method → 새업체 정보 추가
+// → 사용 설정 버튼 활성화 → 저장 시 자동 발급되는 client ID/PW
+84479530620-dmdod7ori9djf5k097fjdto12f0l4ibn.apps.googleusercontent.com // 구글 ID 사용
+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 
+// → 구글 API 서비스 → 승인된 자바스크립트 원본 4 등록
+// → 정보와 일치하지 않으면 403 에러 발생 주의
+
+3 애플리케이션 홈페이지
+http://localhost:5500/google/index.html
+
+4 승인된 자바스크립트 원본 ; 사용중인 웹서버 포트 번호 확인 필수!
+http://localhost:5500
+http://localhost
+
+5 승인된 리디렉션 URL
+http://localhost:5500/google/googleLogin.html
+http://localhost:5500/google/firebaseJSTest1.html
+http://localhost:5500/google/modalLogin.html

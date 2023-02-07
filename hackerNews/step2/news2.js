@@ -13,6 +13,7 @@ const CONTENTURL = "https://api.hnpwa.com/v0/item/@id.json";
 
 // 제목을 클릭했을 때 보여 줄 다중 댓글 출력위한 div 생성
 const content = document.createElement("div");
+// DOM API 단점 ; 구조가 직관적이지 않음
 
 window.addEventListener("hashchange", () => {
   const id = this.location.hash.substr(1);
@@ -21,10 +22,10 @@ window.addEventListener("hashchange", () => {
     .then((response) => response.json())
     .then((result) => {
       // <div><h1></h1></div>
-      const title = this.document.createElement("h1");
+      const title = this.document.createElement("h1"); // DOM API <h1></h1>
       title.innerHTML = result.title;
       // 15열에서 생성한 div 태그 넣기
-      content.appendChild(title);
+      content.appendChild(title); // DOM API 라우팅(한 화면에 모두 보임 ; SPA(React)) 기능 구현 불가
     })
     .catch((error) => console.log("error", error));
 });
