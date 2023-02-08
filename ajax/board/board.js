@@ -29,12 +29,13 @@ document.querySelector("태그 이름") */
 // const priceEl = document.querySelector("#price"); // 소비자가
 
 function getText(el) {
-  let text = ""; // ES6(ECMAScript2015) ; 적용 안 되는 브라우저이면 bable(자바 스크립트 컴파일러) 필요 
+  let text = ""; // ES6(ECMAScript2015) ; 적용 안 되는 브라우저이면 bable(자바 스크립트 컴파일러) 필요
   // 또는 번들러(작성한 코드를 배포하는 버전에 따라 실제 운영 서버에 올릴 수 있게 변형) parcel(웹팩 - 리액트)
   if (el != null) {
     if (el.childNodes) {
-        console.log(el + ", " + el.childNodes.length); // 1 1
-      for (let i = 0; i < el.childNodes.length; i++) { // costEl, priceEl
+      console.log(el + ", " + el.childNodes.length); // 1 1
+      for (let i = 0; i < el.childNodes.length; i++) {
+        // costEl, priceEl
         // el.childNodes.length
         // costEl, priceEl
         let childNode = el.childNodes[i];
@@ -53,8 +54,10 @@ function getText(el) {
 	param1 :document.querySelector("#boardSold")
 	param2 :xhrObject. 
 	************************************************/
-function replaceText(el, value) { // el = boardSoldEl(보드 판매량), cashEl(마진 계산)
-  if (el != null) { // sapn
+function replaceText(el, value) {
+  // el = boardSoldEl(보드 판매량), cashEl(마진 계산)
+  if (el != null) {
+    // sapn
     clearText(el); //기존에 있던 10을 지워주세요.
     //새로운 텍스트 노드 15를 생성하기
     var newNode = document.createTextNode(value); //15
@@ -64,8 +67,9 @@ function replaceText(el, value) { // el = boardSoldEl(보드 판매량), cashEl(
 }
 //기존 태그안에 문자열 지우는 함수 구현
 function clearText(el) {
-  if (el != null) { 
-    if (el.childNodes) { // 자바 스크립트에서는 0이 아닌 것은 모두 참
+  if (el != null) {
+    if (el.childNodes) {
+      // 자바 스크립트에서는 0이 아닌 것은 모두 참
       for (let i = 0; i < el.childNodes.length; i++) {
         let childNode = el.childNodes[i];
         el.removeChild(childNode); // 해당 el 삭제 > DOM API ; 직관적이지 않고 유지보수가 어려움

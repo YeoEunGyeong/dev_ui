@@ -1,13 +1,12 @@
 1 API 키
-AIzaSyCOxWTmgfMP1oENBr0Un_tlq4bVRfnIwGE
+AIzaSyC0M0w2uhDKdg8Sb04Q0QeLgQhAFfFnn1o
 
 2 구글 클라이언트 ID/PW
-690526557345-smtsdkb28vn9g1d8qa37sc1bukqb3fl1.apps.googleusercontent.com
-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
+722965728614-r3bhk2gslsqqao80n7669ke9uu0phvev.apps.googleusercontent.com
 // OAuth ID 발급 → Authentication → Sign-in method → 새업체 정보 추가
 // → 사용 설정 버튼 활성화 → 저장 시 자동 발급되는 client ID/PW
-84479530620-dmdod7ori9djf5k097fjdto12f0l4ibn.apps.googleusercontent.com // 구글 ID 사용
-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 
+722965728614-r3bhk2gslsqqao80n7669ke9uu0phvev.apps.googleusercontent.com // 구글 ID 사용
+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
 // → 구글 API 서비스 → 승인된 자바스크립트 원본 4 등록
 // → 정보와 일치하지 않으면 403 에러 발생 주의
 

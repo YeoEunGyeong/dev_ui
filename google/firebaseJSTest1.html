@@ -24,9 +24,38 @@
         //console.log(e.target+e.currentTarget)
         authLogic.login("Google").then((snapshot) => {
           console.log(snapshot);
+          // 구글 서버에서 응답으로 받은 정보를 문자열로 변환
+          const temp = JSON.stringify(snapshot);
+          // 위에서 변환된 정보를 배열로 변환
+          const jsonDoc = JSON.parse(temp);
+          // uid ; 구글에서 할당되는 아이디값(변경 시 다른 유저)
+          // displayName ; 구글 계정 이름
+          // email
+          console.log(jsonDoc.user);
         });
+      }); // end btnGoogle
+      const moveMain = (displayName) => {
+        console.log(displayName);
+        window.location.href = "./index.html?displayName = " + displayName;
+      };
+      // 구글 서버에서 상태값의 변화를 체크하고 자동으로 호출
+      // 개발자가 호출하는 함수 아님
+      // 파라미터 user가 바뀌면 자동으로 호출
+      authLogic.onAuthChange((user) => {
+        // 아래 구문 분석 필수! 리액트에서 빈번하게 사용
+        user && moveMain(user.displayName);
       });
+      function signOut() {
+        console.log("로그아웃");
+        // import문 사용 시 주의! type = module 추가
+        // text/javascript와 module 호환 안 되기 때문에 이를 고려한 코딩 전개
+        // 방안 : 직접 함수 호출 안 되고 태그의 아이디 사용하여 addEventListener로 함수 처리
+        authLogic.logout();
+      }
     </script>
     <button id="btnGoogle">구글로그인</button>
   </body>
 </html>
+
+<!-- 
+http://localhost:5500/google/firebaseJSTest1.html -->
