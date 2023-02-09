@@ -5,7 +5,7 @@ const colors = ["red", "green", "blue"];
 const c1 = colors[0];
 const c2 = colors[1];
 const c3 = colors[2];
-const { color1, color2, color3 } = colors;
+const { color1, color2, color3 } = colors; // React 빈번하게 사용
 console.log(colors);
 console.log(c1);
 

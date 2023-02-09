@@ -7,7 +7,7 @@ const colors = ["red", "green", , "blue"];
 let result = colors.toString();
 console.log(typeof result);
 
-// join() : 구분자를 활용해 문자열로 이어붙이기
+// !! join() : 구분자를 활용해 문자열로 이어붙이기 
 result = colors.join("+");
 console.log(result);
 
@@ -15,7 +15,7 @@ console.log(result);
 result = colors.pop();
 console.log(result);
 
-// push() : 배열의 끝부분에 새로운 요소 추가(리턴값으로 배열의 길이 반환)
+// !! push() : 배열의 끝부분에 새로운 요소 추가(리턴값으로 배열의 길이 반환)
 result = colors.push("yellow");
 console.log(result);
 
@@ -36,7 +36,7 @@ const color2 = ["cyan", "brown"];
 result = colors.concat(color2);
 console.log(result);
 
-// slice() : 배열 잘라내기 - 새로운 배열을 만들어서 잘라내기(리액트 CRUD처리시)
+// !! slice() : 배열 잘라내기 - 새로운 배열을 만들어서 잘라내기(리액트 CRUD처리시)
 result = colors.slice(1);
 console.log(result+ typeof(result));
 result = colors.slice(1, -1);

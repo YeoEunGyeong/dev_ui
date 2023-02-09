@@ -9,7 +9,7 @@ function Counter() {
 // prototype을 이용하면 자바스크립트처럼 사용자 정의 객체를 선언한 뒤
 // 사용자 정의 함수를 정의 가능
 // typescript - 바닐라 스크립트 기반 위에 얹혀진 언어 ; 객체 지향, 캡슐화, 상속, 다향성
-// 자바 스크립틍서도 사용자 정의 객체 만들 수 있음 function
+// 자바 스크립트에서도] 사용자 정의 객체 만들 수 있음 function
 // 사용자 정의 함수를 정의할 때는 prototype 사용
 // prototype 사용하여 함수를 정의하는 것은 사용자 정의 API 만드는 것
 Counter.prototype.add = function (array) {
@@ -35,7 +35,7 @@ function Sonata() {
 }
 
 Sonata.prototype.stop = function (wheelNum) {
-  console.log("stop 호출" + wheelNum);
+  console.log("stop 호출" + wheelNum); // 고차 함수는 함수일 때 < ?
 };
 
 const myCar = new Sonata();
