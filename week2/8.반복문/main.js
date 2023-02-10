@@ -5,7 +5,7 @@ let colors = ["red", "green", "blue"]; //리터널 이용한 배열 선언 및 �
 // ES5- 반복처리기능만, 유사배열도 처리해줌, ES6 - 순수배열만
 // 이전
 colors.forEach(function (color, index, items) {
-  //3번 반복
+  // 3번 반복
   //console.log(color);//red green blue
   //console.log(index);//0        1        2
   //console.log(items);//["red", "green", "blue"] ["red", "green", "blue"] ["red", "green", "blue"]
@@ -20,8 +20,8 @@ colors.forEach((color) => {
 });
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach
-colors.map(function (color, index, items) {
-  //3번 반복
+colors.map(function (color, index, items) { // 많이 사용되는 패턴 중요!
+  // 3번 반복
   console.log(color); //red green blue
   console.log(index); //0        1        2
   console.log(items); //["red", "green", "blue"] ["red", "green", "blue"] ["red", "green", "blue"]

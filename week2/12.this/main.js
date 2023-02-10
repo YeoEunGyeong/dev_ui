@@ -19,7 +19,7 @@ btn.addEventListener(
 btn.addEventListener(
   "click",
   function (e) {
-    console.log(this);
+    console.log(this); // button
   }.bind("tomato")
 );
 

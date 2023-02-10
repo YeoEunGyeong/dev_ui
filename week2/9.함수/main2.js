@@ -1,5 +1,5 @@
 function func1() {
-  //이름이 있는 함수임
+  // 이름이 있는 함수임
   console.log("func1");
   func2(func1);
 }

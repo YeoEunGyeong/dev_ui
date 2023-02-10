@@ -1,4 +1,8 @@
 const ajax = new XMLHttpRequest();
+// 문자열로 처리하는 경우 훨씬 더 직관적
+// ; 정적, 고정적, 결정된 상태
+// 배열은 덜하다 하지만 배열을 사용하는 이유 ???
+// ; 동적, 
 const videoList = []; // 원소가 늘어나는 것이지 값이 변화하지 않기 때문에 const
 const key = "AIzaSyC0M0w2uhDKdg8Sb04Q0QeLgQhAFfFnn1o";
 const MOST_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${key}`;
