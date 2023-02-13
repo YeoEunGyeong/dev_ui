@@ -1,0 +1,4 @@
+package.json에 등록 필요
+
+생략하면 CommonsJS 이므로 반드시 module 등록 후 사용 가능
+package.json > "type": "module", 
