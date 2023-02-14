@@ -1,0 +1,14 @@
+전송 시 사용 가능 태그
+1
+<button type = "submit" onclick = "send()">전송</button>
+기본 속성은 submit이므로 추가로 submit() 호출하지 않아도 action 페이지로 이동
+기존의 연결이 끊어지고 새로운 요청이 전송됨
+action = "XXX.html or XXX.jsp or XXX.serlvelt" → 페이지 새로 열림(버튼이 있던 화면 아님)
+
+2
+<input type = "button" value = "전송" onclick = "send()"/>
+submit 속성이 디폴트가 아니라 페이지 이동 일어나지 않음
+
+3
+<a href = "javascript:send()">전송</a>
+submit 속성이 디폴트가 아니라 페이지 이동 일어나지 않음
