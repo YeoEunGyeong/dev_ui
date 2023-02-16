@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    fieldset {
+      width: 400px;
+      height: 180px;
+    }
+
+    #a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<body>
+
+<fieldset>
+  <legend>회원 가입 양식</legend>
+  <table>
+    <tr>
+      <td><label for="ID">ID</label></td>
+      <td>
+        <input id="ID" type="text" />
+        <input id="check" type="button" value="중복확인"/>
+      </td>
+    </tr>
+
+    <tr>
+      <td><label for="pwd">비밀번호</label></td>
+      <td><input id="pwd" type="password" /></td>
+    </tr>
+
+    <tr>
+      <td><label for="pwd2">비밀번호 확인</label></td>
+      <td><input id="pwd2" type="password" /></td>
+    </tr>
+
+    <tr>
+      <td><label for="pwd2">지역</label></td>
+      <td>
+        <input class="loc" name="radi" type="radio" onclick='check(0)'/>서울
+        <input class="loc" name="radi" type="radio" onclick='check(1)'/>부산
+        <input class="loc" name="radi" type="radio" onclick='check(2)'/>대구</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td style="text-align:center" >
+        <input id="clear" type="button" value="초기화"></input>
+        <input id="register" type="submit" value="회원가입" />
+      </td>
+    </tr>
+  </table>
+  <script>
+
+    const id = document.querySelector("#ID");
+    const pw = document.querySelector("#pwd");
+    const pw2 = document.querySelector("#pwd2");
+    const loc = document.getElementsByClassName('loc');
+    const register = document.querySelector("#register")
+
+    
+    // 중복확인 정규식 체크
+    const duplicate = document.querySelector("#check");
+    const SUCCESS_COLOR = "green";
+    const FAIL_COLOR = "red"; 
+    const reg = /^[a-z][a-zA-Z0-9!@#]{6,12}$/;
+
+    duplicate.addEventListener('click', () => {
+      console.log(reg.test(id.value));
+      if(reg.test(id.value)) {
+        id.style.backgroundColor=SUCCESS_COLOR;
+      } else {
+        id.style.backgroundColor=FAIL_COLOR;
+      }
+    })
+
+
+    // 회원가입시 지역 선택 유무 확인
+    register.addEventListener('click' , () => {
+      let selected = false;
+      const raidos = document.getElementsByName("radi")
+
+      for(let radio of raidos) {
+        if(radio.type === 'radio' && radio.checked) {
+          selected = true;
+        }
+      }
+      if(!selected) {
+        alert("지역을 선택해주세요")
+      }
+    })
+
+    // 초기화
+    const btn_clear = document.querySelector('#clear')
+    btn_clear.addEventListener('click',() => {
+      id.value = null;
+      pw.value=null;
+      pw2.value=null;
+
+      for(let i=0; i<loc.length; i++) {
+        loc[i].checked =false;
+      }
+    })
+
+    // 라디오박스 체크 해제
+    let checkNum;
+    const check = (num) =>{
+      const obj = $('input:radio[name="radi"]');
+      if(checkNum==num){
+        obj.eq(num).attr('checked',false);
+        checkNum = null;
+      }else{
+      checkNum = num;
+    }
+  }
+
+  </script>
+
+</body>
+</html>

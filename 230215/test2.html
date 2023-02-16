@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 화면 -->
+  <form method="post" action="insert.no">
+    <fieldset>
+        <legend>회원 가입 양식</legend> 
+        <tr>
+          <td><label>아이디</label></td>
+          <td><input type="text" id = "id" name="id" required="required"></td>
+          <td><input type="button" onclick="click()" id="id_request" value="중복확인"></td>
+      </tr>
+        <br />
+        <tr>
+          <td><label>비밀번호</label></td>
+          <td><input type="text" id = "id" name="id" required="required"></td>
+      </tr>
+        <br />
+        <tr>
+          <td><label>비밀번호 확인</label></td>
+          <td><input type="text" id = "id" name="id" required="required"></td>
+      </tr>
+        <br />
+        <label>지역</label>
+        <label><input type="radio" name="loc" value="seoul">서울</label>
+        <label><input type="radio" name="loc" value="busan">부산</label>
+        <label><input type="radio" name="loc" value="daegu">대구</label>
+        <br />
+        <!-- 4 초기화 버튼 클릭 시 내용 초기화 -->
+            <td><input type="reset" id="id_reset" value="초기화"></td>
+            <td><input type="button" onclick="signCheck()" id="id_request" value="회원가입"></td>
+          </form>
+          </fieldset>
+      </body>
+      <SCRIPT LANGUAGE="JavaScript">
+        function click () {
+            const str = "loves2!@#"
+            const lowidreq = str.replace(/\[a-z]/g, char => chat.toLowercase());
+            const idreq = /[^a-z0-9!@#]{6,12}/;
+            if ()
+        }
+            function locCheck() {
+            if ($("input[name=loc]:radio:checked").length < 1) {
+                alert("지역을 선택해 주세요");
+                return false;
+            }
+        });
+        </SCRIPT>
+</html>
